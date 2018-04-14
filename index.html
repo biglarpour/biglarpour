@@ -159,17 +159,17 @@
               <form method="post" action="/assets/php/send_mail.php" id="contact-form" class="work-request">
                 <div class="work-request--information">
                     <div class="information-name">
-                      <input id="name" type="text" spellcheck="false">
+                      <input id="name" name="name" type="text" spellcheck="false">
                       <label for="name">Name</label>
                     </div>
                     <div class="information-email">
-                      <input id="email" type="email" spellcheck="false">
+                      <input id="email" name="email" type="email" spellcheck="false">
                       <label for="email">Email</label>
                     </div>
                 </div>
                   <div class="work-request--information" style="text-align: center">
                     <div class="information-message">
-                      <textarea id="message" spellcheck="true" data-gramm="true" placeholder="Message" rows="4"></textarea>
+                      <textarea id="message" name="message" spellcheck="true" data-gramm="true" placeholder="Message" rows="4"></textarea>
                       <input type="hidden" name="gotcha" id="gotcha">
                     </div>
                 </div>
