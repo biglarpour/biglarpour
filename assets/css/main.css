@@ -442,6 +442,8 @@ body {
     content: "04"; }
   .side-nav li:nth-child(5)::before {
     content: "05"; }
+  .side-nav li:nth-child(6)::before {
+    content: "06"; }
   .side-nav li.is-active {
     color: #0f33ff;
     transition: color 0.4s ease-in-out; }
@@ -1141,3 +1143,14 @@ body {
     transition-delay: 0.16s; }
 
 /*# sourceMappingURL=main.css.map */
+
+.github {
+    position: relative;
+    width: 700px;
+    max-width: 75%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+    text-align: center;
+}
