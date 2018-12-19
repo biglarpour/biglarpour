@@ -122,6 +122,8 @@ $( document ).ready(function() {
     $('.side-nav, .outer-nav').children().removeClass('is-active');
     $('.side-nav').children().eq(nextPos).addClass('is-active');
     $('.outer-nav').children().eq(nextPos).addClass('is-active');
+    var nav_name = $('.side-nav').children().eq(nextPos).closest('span').text();
+    window.location.hash = '#'+ nav_name;
 
   }
 
@@ -303,9 +305,20 @@ $( document ).ready(function() {
         ]
     });
 
+   function loadHash() {
+       var page_lookup = JSON.parse('{"about":"1","skills":"2","contact":"3","github":"4","message":"5"}');
+       var lochash    = location.hash.substr(1);
+       var next_index = page_lookup[lochash] || 1;
+       var keys = Object.keys(page_lookup);
+       var lastItem = page_lookup[keys[keys.length - 1]];
+       updateNavs(next_index);
+       updateContent(1, next_index, lastItem);
+   }
+
   outerNav();
   // workSlider();
   transitionLabels();
+  loadHash()
 
 
 
